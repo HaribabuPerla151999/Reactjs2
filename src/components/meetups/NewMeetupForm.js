@@ -3,7 +3,7 @@ import clasess from "./NewMeetupForm.module.css";
 import {useRef} from "react";
 
 
-function NewMeetupForm(){
+function NewMeetupForm(props){
     const titileInputRef=useRef();
     const imageRef=useRef();
     const addressRef=useRef();
@@ -23,7 +23,7 @@ function NewMeetupForm(){
           description:enteredDescription
 
         };
-        console.log(meetupData);
+        props.onMeetup(meetupData)
         
     }
 
